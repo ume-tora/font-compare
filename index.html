@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日本語フォント比較ツール</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&family=Zen+Antique&family=Zen+Antique+Soft&family=Sawarabi+Gothic&family=Sawarabi+Mincho&family=Kosugi&family=Kosugi+Maru&family=Klee+One:wght@400;600&family=Yuji+Syuku&family=Yuji+Mai&family=Yuji+Boku&family=Stick&family=Reggae+One&family=Rampart+One&family=Yusei+Magic&family=DotGothic16&family=Train+One&family=Kaisei+Tokumin:wght@400;500;700&family=Kaisei+HarunoUmi:wght@400;500;700&family=Kaisei+Opti:wght@400;500;700&family=Kaisei+Decol:wght@400;500;700&family=Zen+Maru+Gothic:wght@300;400;500;700;900&family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Hachi+Maru+Pop&family=Shippori+Mincho:wght@400;500;600;700;800&family=Shippori+Mincho+B1:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>日本語フォント比較ツール</h1>
+            <p>日本語に最適化されたフォントを比較・検討できるツールです。カテゴリー別に分類された豊富なフォントから、あなたのプロジェクトに最適なフォントを見つけましょう。</p>
+        </header>
+
+        <div class="input-section">
+            <div class="top-controls">
+                <button id="themeToggle" class="theme-toggle">🌙</button>
+                <select id="sampleSelect" class="sample-select">
+                    <option value="">カスタムテキスト</option>
+                </select>
+            </div>
+            
+            <textarea id="textInput" placeholder="比較したいテキストを入力してください..." rows="3">あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら</textarea>
+            
+            <div class="controls">
+                <div class="control-group">
+                    <label for="fontSize">フォントサイズ:</label>
+                    <input type="range" id="fontSize" min="12" max="48" value="24">
+                    <span id="fontSizeValue">24px</span>
+                </div>
+                
+                <div class="control-group">
+                    <label for="fontWeight">フォントウェイト:</label>
+                    <select id="fontWeight">
+                        <option value="normal">通常</option>
+                        <option value="bold">太字</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="category-filters">
+                <button class="category-btn active" data-category="すべて">すべて</button>
+                <button class="category-btn" data-category="ゴシック体">ゴシック体</button>
+                <button class="category-btn" data-category="明朝体">明朝体</button>
+                <button class="category-btn" data-category="丸ゴシック">丸ゴシック</button>
+                <button class="category-btn" data-category="手書き風">手書き風</button>
+                <button class="category-btn" data-category="ポップ・デザイン">ポップ・デザイン</button>
+                <button class="category-btn" data-category="モノスペース">モノスペース</button>
+            </div>
+        </div>
+
+        <div class="font-grid" id="fontGrid">
+            <!-- フォントサンプルがここに動的に生成されます -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
